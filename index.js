@@ -26,7 +26,7 @@ function init() {
 
 function update() {
   const { width, height } = container.getBoundingClientRect();
-  const slideRect = slides[0].getBoundingClientRect();
+  // const slideRect = slides[0].getBoundingClientRect();
   const a = width / 2;
   const b = height / 2;
   const delta = Math.PI / slides.length / 4;
@@ -60,7 +60,6 @@ function navigationHandler(e) {
   e.preventDefault();
   const { dir } = this.dataset;
   if (dir === 'next') {
-    console.log(slides.length);
     if (activeOrder === Number(slides.length - 1)) {
       activeOrder = 0;
     } else {
@@ -70,9 +69,6 @@ function navigationHandler(e) {
     if (activeOrder === 0) {
       activeOrder = Number(slides.length - 1);
     } else {
-      console.log(slides.length - 1);
-      console.log(slides.length);
-      console.log(activeOrder);
       activeOrder = Math.max(0, activeOrder - 1);
     }
   }

@@ -24,6 +24,7 @@
   line-height: 175px;
   font-size: 40px;
   transition: all .4s;
+  cursor: pointer;
  }
 
 .slider__nav {
